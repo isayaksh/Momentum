@@ -1,0 +1,109 @@
+html, body, .wrapper {
+  height: 99%;
+  text-align: center;
+  color: white;
+  padding: 1px;
+}
+
+ul {
+  list-style:none;
+}
+
+button {
+  background-color: transparent;
+  border: transparent;
+}
+
+.hidden {
+  display: none;
+}
+
+.backGround{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* font design */
+
+.fontWeather {
+  font-style: italic;
+  font-weight: bold;
+  text-align: right;
+}
+
+.fontClock {
+  font-size: 10rem;
+  font-weight: bold;
+}
+
+.fontGreeting {
+  font-size: 2rem;
+}
+
+.fontQuote {
+  display: table-cell;
+  font-style: italic;
+  font-weight: bold;
+  text-align: left;
+  vertical-align: bottom;
+}
+
+.todoList {
+  text-align: left;
+  padding-left: 30%;
+}
+
+/* input창 커스텀*/
+.input {
+  font-size: 1rem;
+  color: white;
+  background-color:transparent;
+  outline: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid white;
+}
+
+.input::placeholder {
+  color: white;
+  font-size: bold;
+  text-align: center;
+}
+
+.input:focus{
+  text-align: center;
+}
+
+/* grid layout */
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.weatherBox {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+
+.mainBox {
+  grid-column:2/3;
+  grid-row:2/4;
+}
+
+.todoBox {
+  grid-column:2/3;
+  grid-row:4/6;
+  text-align: center;
+}
+
+.quoteBox {
+  display: table;
+  grid-column:1/2;
+  grid-row:5/6;
+}

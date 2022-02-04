@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/style.css"/>
+  <title>Momentum App</title>
+</head>
+<body>
+  <!-- "clock", "login-form", "greeting"의 id를 가지는 <div> element를 담은 <main> -->
+  <div class="wrapper">
+    <div class="weatherBox fontWeather">
+      <!-- 현재 지역의 날씨 정보를 출력하는 "weather" <div>-->
+      <div id="weather"></div>
+    </div>
+
+    <div class="mainBox">
+      <!-- 현재의 시간 정보를 출력하는 "clock" <div> -->
+      <div id="clock" class="fontClock"></div>
+      
+      <!-- 유저의 이름 정보를 입력하는 <form> element -->
+      <form id="login-form" class="hidden">
+        <!-- required : 폼 데이터(form data)가 서버로 제출되기 전 반드시 채워져 있어야 하는 입력 필드를 명시 -->
+        <!-- maxlength : <input> 요소에 입력할 수 있는 최대 문자수를 명시 -->
+        <!-- 유저의 이름 정보를 입력하는 <input> element -->
+        <input required maxlength="15" type="text" placeholder="What is your name?" class="input"/>
+      </form>
+
+      <!-- 유저의 이름 정보가 존재할 경우 보여지는 "greeting" <h1> -->
+      <h1 id = greeting class="hidden fontGreeting"></h1>
+    </div>
+
+    <!-- quote 정보를 출력할 "quote" <div> -->
+    <div class="quoteBox">
+      <div id="quote" class="fontQuote"></div>
+    </div>
+
+    <!-- todo input과 todo list element 값을 갖는 "todoBox" <div> -->
+    <div class="todoBox">
+      <!-- todo 정보를 입력하는 <form> element -->
+      <form id="todo-form" class="hidden">
+        <!-- required : 폼 데이터(form data)가 서버로 제출되기 전 반드시 채워져 있어야 하는 입력 필드를 명시 -->
+        <!-- todo 정보를 입력하는 <input> element -->
+        <input required type="text" placeholder="Write a To Do." class="input">
+      </form>
+      <!-- todo 요소를 순서가 없는 리스트에 표시할 <ul> element -->
+      <ul id="todo-list" class="hidden todoList"></ul>
+    </div>
+  </div>
+
+  <!-- 각 element 요소가 실행할 동적 활동을 작성한 js -->
+  <script src="js/greetings.js"></script>
+  <script src="js/clock.js"></script>
+  <script src="js/quotes.js"></script>
+  <script src="js/background.js"></script>
+  <script src="js/todo.js"></script>
+  <script src="js/weather.js"></script>
+</body>
+</html>
